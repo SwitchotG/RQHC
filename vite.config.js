@@ -8,7 +8,7 @@ import vueDevTools from "vite-plugin-vue-devtools";
 export default defineConfig(({ mode }) => {
   return {
     plugins: [vue(), vueDevTools()],
-    base: "/RQHC/",
+    base: "/",
     assetsInclude: ["@/data/**", "@/assets/*"],
     server: {
       host: "0.0.0.0",
