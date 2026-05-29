@@ -4,13 +4,13 @@
     <h1 class="w-100" style="text-align: center;">Bienvenue sur le site officiel du RQHC !</h1>
     <br />
     <br />
-    <h2 class="w-100">
+    <h2 class="w-100 m-5">
         Nous sommes un pays représentant les valeurs du Québec et de la baie d'Hudson dans le serveur Minecraft de WorldEra ! 
         Vous pouvez voir notre map dynamique ou nous rejoindre !
         Ce site est encore en dévellopement et des photos du RQHC, ainsi que d'autres informations seront régulièrement ajouté !
     </h2>
     <br/>
-    <h2>Si vous voulez ajouter quelque chose à la map venez sur le discord ou envoyez moi un message : Switchot</h2>
+    <h2 class="w-100 m-5">Si vous voulez ajouter quelque chose à la map venez sur le discord ou envoyez moi un message : Switchot</h2>
     <br/>
     <div class="w-100 d-flex align-content-center justify-content-center gap-5">
         <a type="button" class="btn btn-success w-25" href="https://discord.gg/UdE4kADuvB" target="_blank"><h4>🌎WorldEra🌎</h4></a>
