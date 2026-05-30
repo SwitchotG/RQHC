@@ -1,9 +1,8 @@
-// Mot de passe lu depuis .env (variable VITE_ADMIN_PASSWORD)
-const ADMIN_PASSWORD = import.meta.env.VITE_ADMIN_PASSWORD
+const ADMIN_PASSWORD = 'R0y4um3-RQHC!S3cr3t#2026'
 
 import { ref, watch } from 'vue'
 import L from 'leaflet'
-import { IMAGE_HEIGHT, saveTerritoriesToStorage } from './map.js'
+import { IMAGE_HEIGHT } from './map.js'
 
 function defaultForm() {
   return {
@@ -182,7 +181,6 @@ export function useMapEditor({ mapRef, territoriesState, renderTerritories }) {
     }
 
     territoriesState.value = list
-    saveTerritoriesToStorage(list)
     renderTerritories()
     cancelAll()
   }
@@ -191,7 +189,6 @@ export function useMapEditor({ mapRef, territoriesState, renderTerritories }) {
     if (!confirm(`Supprimer "${territory.data.LongName}" ?`)) return
     const list = territoriesState.value.filter(t => t.id !== territory.id)
     territoriesState.value = list
-    saveTerritoriesToStorage(list)
     renderTerritories()
     if (editingId.value === territory.id) cancelAll()
   }

@@ -6,19 +6,6 @@ import 'leaflet/dist/leaflet.css'
 export const IMAGE_HEIGHT = 6214
 const IMAGE_WIDTH = 8248
 
-const STORAGE_KEY = 'rqhc-territories-v1'
-
-function loadTerritories() {
-  try {
-    const raw = localStorage.getItem(STORAGE_KEY)
-    if (raw) return JSON.parse(raw)
-  } catch {}
-  return JSON.parse(JSON.stringify(defaultTerritories))
-}
-
-export function saveTerritoriesToStorage(list) {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(list))
-}
 
 function buildPopupContent(territory) {
   const d = territory.data
@@ -67,7 +54,7 @@ export function useMap() {
   const mapRef           = shallowRef(null)
   const cursorCoords     = ref(null)
   const detailsModal     = ref({ open: false, territory: null })
-  const territoriesState = ref(loadTerritories())
+  const territoriesState = ref(JSON.parse(JSON.stringify(defaultTerritories)))
 
   let territoryPolygons = []
 
