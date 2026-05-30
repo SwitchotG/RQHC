@@ -3,7 +3,7 @@ import { ref, computed, onMounted, onUnmounted, nextTick } from 'vue'
 export function useHome() {
 
   /* ─── COUNTDOWN ──────────────────────────────────────────── */
-  const targetDate = ref(new Date(2026, 4, 30, 14, 0))
+  const targetDate = ref(new Date('2026-05-30T16:30:00Z')) // 12h30 EDT (Montréal, UTC-4)
   const now        = ref(new Date())
   let   ticker     = null
 

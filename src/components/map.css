@@ -4,14 +4,21 @@
   height: 100%;
 }
 
-/* ─── RESET GLOBAL (requis par Leaflet/CRS.Simple) ───────── */
-html, body, #app {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
+/* ─── RESET (uniquement quand la carte est présente) ────────
+   :has() cible html/body seulement sur la page /map,
+   sans affecter l'accueil ni les autres pages.           */
+html, body {
+  transform: none !important;   /* requis par Leaflet */
+}
+
+html:has(.map-root),
+body:has(.map-root) {
   overflow: hidden;
-  transform: none !important;
+  height: 100%;
+}
+
+#app:has(.map-root) {
+  height: 100%;
 }
 
 /* ─── WRAPPER POSITION ───────────────────────────────────── */
