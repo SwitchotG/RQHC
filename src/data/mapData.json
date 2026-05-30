@@ -47,21 +47,13 @@
     "data": {
       "LongName": "Royaume du Québec et de l'Hudson Canadien",
       "Owner": "Snax III",
-      "Allies": [
-        "france",
-        "bretagne",
-        "normandie",
-        "rssRussie",
-        "ilesBaleares",
-        "guadeloupe",
-        "grandeIrelande"
-      ],
+      "Allies": [],
       "Enemis": [],
       "Alliances": [
         "ONU"
       ],
       "Members": [],
-      "MembersCount": 0
+      "MembersCount": 25
     }
   },
   {
