@@ -1,7 +1,5 @@
-// ─── MOT DE PASSE ADMIN ──────────────────────────────────────
-// Changez cette valeur pour modifier le mot de passe administrateur
-export const ADMIN_PASSWORD = 'Qu3b3c!@dmin#RQHC'
-// ─────────────────────────────────────────────────────────────
+// Mot de passe lu depuis .env (variable VITE_ADMIN_PASSWORD)
+const ADMIN_PASSWORD = import.meta.env.VITE_ADMIN_PASSWORD
 
 import { ref, watch } from 'vue'
 import L from 'leaflet'
